@@ -452,29 +452,7 @@ var temp = 0;
       playerRef.set(players[playerId]);
         attemptGrabCoin(newX, newY);
     }
-    switch (val) {
-      case 0:
-        changeColor(0);
-        break;
-
-      case 1:
-        changeColor(1);
-        break;
-
-      case 2:
-        changeColor(4);
-        break;
     
-      case 3:
-        changeColor(3);
-        break;
-
-      default:
-        changeColor(0);
-        break;
-
-      
-    }
 
   }
 
@@ -756,19 +734,26 @@ var temp = 0;
 
 
    bu.addEventListener("click", (e) => {
-    handleArrowPress(0, -1);
+    console.log("OK+0");
+     handleArrowPress(0,0, -1);
        firstMove = true;
    });
     bd.addEventListener("click", (e) => {
-      handleArrowPress(0, 1);
+      console.log("OK+1");
+
+      handleArrowPress(0,0, 1);
       firstMove = true;
     });
     bl.addEventListener("click", (e) => {
-            handleArrowPress(-1, 0);
+      console.log("OK+2");
+
+      handleArrowPress(0,-1, 0);
       firstMove = true;
    });
     br.addEventListener("click", (e) => {
-      handleArrowPress(1, 0);
+      console.log("OK+3");
+
+      handleArrowPress(0,1, 0);
       firstMove = true;
     });
 
